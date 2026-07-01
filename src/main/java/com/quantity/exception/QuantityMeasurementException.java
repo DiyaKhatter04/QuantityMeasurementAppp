@@ -1,7 +1,5 @@
 package com.quantity.exception;
 
-
-
 public class QuantityMeasurementException
         extends RuntimeException {
 
