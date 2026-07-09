@@ -1,0 +1,173 @@
+2026-07-09T14:56:05.574+05:30  INFO 28388 --- [QuantityMeasurementApp] [restartedMain] o.e.QuantityMeasurementApplication       : Starting QuantityMeasurementApplication using Java 23.0.1 with PID 28388 (C:\Users\diyak\IdeaProjects\QuantityMeasurementApp\target\classes started by diyak in C:\Users\diyak\IdeaProjects\QuantityMeasurementApp)
+2026-07-09T14:56:05.576+05:30  INFO 28388 --- [QuantityMeasurementApp] [restartedMain] o.e.QuantityMeasurementApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-07-09T14:56:05.855+05:30  INFO 10460 --- [QuantityMeasurementApp] [restartedMain] o.e.QuantityMeasurementApplication       : Starting QuantityMeasurementApplication using Java 23.0.1 with PID 10460 (C:\Users\diyak\IdeaProjects\QuantityMeasurementApp\target\classes started by diyak in C:\Users\diyak\IdeaProjects\QuantityMeasurementApp)
+2026-07-09T14:56:05.864+05:30  INFO 10460 --- [QuantityMeasurementApp] [restartedMain] o.e.QuantityMeasurementApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-07-09T14:56:05.976+05:30  INFO 10460 --- [QuantityMeasurementApp] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-07-09T14:56:05.977+05:30  INFO 10460 --- [QuantityMeasurementApp] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-07-09T14:56:06.505+05:30  INFO 28388 --- [QuantityMeasurementApp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-09T14:56:06.535+05:30  INFO 28388 --- [QuantityMeasurementApp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 26 ms. Found 1 JPA repository interface.
+2026-07-09T14:56:06.818+05:30  INFO 28388 --- [QuantityMeasurementApp] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-07-09T14:56:06.821+05:30  INFO 28388 --- [QuantityMeasurementApp] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-09T14:56:06.822+05:30  INFO 28388 --- [QuantityMeasurementApp] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.41]
+2026-07-09T14:56:06.874+05:30  INFO 28388 --- [QuantityMeasurementApp] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-07-09T14:56:06.875+05:30  INFO 28388 --- [QuantityMeasurementApp] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1295 ms
+2026-07-09T14:56:07.032+05:30  INFO 28388 --- [QuantityMeasurementApp] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-07-09T14:56:07.037+05:30  INFO 28388 --- [QuantityMeasurementApp] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-07-09T14:56:07.058+05:30  INFO 28388 --- [QuantityMeasurementApp] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-09T14:56:07.061+05:30  INFO 28388 --- [QuantityMeasurementApp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2026-07-09T14:56:07.064+05:30  INFO 28388 --- [QuantityMeasurementApp] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection conn10: url=jdbc:h2:mem:quantitydb user=SA
+2026-07-09T14:56:07.065+05:30  INFO 28388 --- [QuantityMeasurementApp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2026-07-09T14:56:07.069+05:30  WARN 28388 --- [QuantityMeasurementApp] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-07-09T14:56:07.071+05:30  INFO 28388 --- [QuantityMeasurementApp] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-07-09T14:56:07.149+05:30  INFO 28388 --- [QuantityMeasurementApp] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-09T14:56:07.204+05:30  INFO 28388 --- [QuantityMeasurementApp] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-09T14:56:07.315+05:30  INFO 28388 --- [QuantityMeasurementApp] [restartedMain] o.e.s.QuantityMeasurementServiceImpl     : QuantityMeasurementService initialized.
+2026-07-09T14:56:07.374+05:30  WARN 28388 --- [QuantityMeasurementApp] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-09T14:56:07.394+05:30  WARN 28388 --- [QuantityMeasurementApp] [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 69e56cf3-7bc4-4e5e-8151-850920287afb
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-07-09T14:56:07.397+05:30  INFO 28388 --- [QuantityMeasurementApp] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-07-09T14:56:07.763+05:30  INFO 28388 --- [QuantityMeasurementApp] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:quantitydb'
+2026-07-09T14:56:07.785+05:30  INFO 28388 --- [QuantityMeasurementApp] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-07-09T14:56:07.820+05:30  INFO 28388 --- [QuantityMeasurementApp] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-07-09T14:56:07.848+05:30  INFO 28388 --- [QuantityMeasurementApp] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-07-09T14:56:07.857+05:30  INFO 28388 --- [QuantityMeasurementApp] [restartedMain] o.e.QuantityMeasurementApplication       : Started QuantityMeasurementApplication in 2.411 seconds (process running for 276.87)
+2026-07-09T14:56:08.427+05:30  INFO 10460 --- [QuantityMeasurementApp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-09T14:56:08.527+05:30  INFO 10460 --- [QuantityMeasurementApp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 82 ms. Found 1 JPA repository interface.
+2026-07-09T14:56:10.004+05:30  INFO 10460 --- [QuantityMeasurementApp] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-07-09T14:56:10.038+05:30  INFO 10460 --- [QuantityMeasurementApp] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-09T14:56:10.039+05:30  INFO 10460 --- [QuantityMeasurementApp] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.41]
+2026-07-09T14:56:10.164+05:30  INFO 10460 --- [QuantityMeasurementApp] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-07-09T14:56:10.165+05:30  INFO 10460 --- [QuantityMeasurementApp] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4187 ms
+2026-07-09T14:56:10.757+05:30  INFO 10460 --- [QuantityMeasurementApp] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-07-09T14:56:10.898+05:30  INFO 10460 --- [QuantityMeasurementApp] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.15.Final
+2026-07-09T14:56:10.962+05:30  INFO 10460 --- [QuantityMeasurementApp] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-07-09T14:56:11.378+05:30  INFO 10460 --- [QuantityMeasurementApp] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-09T14:56:11.430+05:30  INFO 10460 --- [QuantityMeasurementApp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-07-09T14:56:11.641+05:30  INFO 10460 --- [QuantityMeasurementApp] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:quantitydb user=SA
+2026-07-09T14:56:11.644+05:30  INFO 10460 --- [QuantityMeasurementApp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-07-09T14:56:11.678+05:30  WARN 10460 --- [QuantityMeasurementApp] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-07-09T14:56:11.709+05:30  INFO 10460 --- [QuantityMeasurementApp] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-07-09T14:56:12.695+05:30  INFO 10460 --- [QuantityMeasurementApp] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-09T14:56:12.764+05:30  INFO 10460 --- [QuantityMeasurementApp] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-09T14:56:13.352+05:30  INFO 10460 --- [QuantityMeasurementApp] [restartedMain] o.e.s.QuantityMeasurementServiceImpl     : QuantityMeasurementService initialized.
+2026-07-09T14:56:13.687+05:30  WARN 10460 --- [QuantityMeasurementApp] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-09T14:56:13.766+05:30  WARN 10460 --- [QuantityMeasurementApp] [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: ee4e0075-1352-4872-a498-084a68c0b5bf
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-07-09T14:56:13.784+05:30  INFO 10460 --- [QuantityMeasurementApp] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-07-09T14:56:15.109+05:30  INFO 10460 --- [QuantityMeasurementApp] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:quantitydb'
+2026-07-09T14:56:15.211+05:30  INFO 10460 --- [QuantityMeasurementApp] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-07-09T14:56:15.335+05:30  WARN 10460 --- [QuantityMeasurementApp] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2026-07-09T14:56:15.447+05:30  WARN 10460 --- [QuantityMeasurementApp] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2026-07-09T14:56:15.452+05:30  INFO 10460 --- [QuantityMeasurementApp] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-09T14:56:15.463+05:30  WARN 10460 --- [QuantityMeasurementApp] [restartedMain] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-232]
+2026-07-09T14:56:15.464+05:30  INFO 10460 --- [QuantityMeasurementApp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-07-09T14:56:15.468+05:30  INFO 10460 --- [QuantityMeasurementApp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-07-09T14:56:15.499+05:30  INFO 10460 --- [QuantityMeasurementApp] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-07-09T14:56:15.531+05:30 ERROR 10460 --- [QuantityMeasurementApp] [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2026-07-09T14:58:54.245+05:30  INFO 29020 --- [QuantityMeasurementApp] [restartedMain] o.e.QuantityMeasurementApplication       : Starting QuantityMeasurementApplication using Java 23.0.1 with PID 29020 (C:\Users\diyak\IdeaProjects\QuantityMeasurementApp\target\classes started by diyak in C:\Users\diyak\IdeaProjects\QuantityMeasurementApp)
+2026-07-09T14:58:54.249+05:30  INFO 29020 --- [QuantityMeasurementApp] [restartedMain] o.e.QuantityMeasurementApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-07-09T14:58:54.356+05:30  INFO 29020 --- [QuantityMeasurementApp] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-07-09T14:58:54.357+05:30  INFO 29020 --- [QuantityMeasurementApp] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-07-09T14:58:56.781+05:30  INFO 29020 --- [QuantityMeasurementApp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-09T14:58:56.890+05:30  INFO 29020 --- [QuantityMeasurementApp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 87 ms. Found 1 JPA repository interface.
+2026-07-09T14:58:58.146+05:30  INFO 29020 --- [QuantityMeasurementApp] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-07-09T14:58:58.178+05:30  INFO 29020 --- [QuantityMeasurementApp] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-09T14:58:58.179+05:30  INFO 29020 --- [QuantityMeasurementApp] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.41]
+2026-07-09T14:58:58.308+05:30  INFO 29020 --- [QuantityMeasurementApp] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-07-09T14:58:58.309+05:30  INFO 29020 --- [QuantityMeasurementApp] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3951 ms
+2026-07-09T14:58:58.887+05:30  INFO 29020 --- [QuantityMeasurementApp] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-07-09T14:58:58.996+05:30  INFO 29020 --- [QuantityMeasurementApp] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.15.Final
+2026-07-09T14:58:59.073+05:30  INFO 29020 --- [QuantityMeasurementApp] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-07-09T14:58:59.525+05:30  INFO 29020 --- [QuantityMeasurementApp] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-09T14:58:59.590+05:30  INFO 29020 --- [QuantityMeasurementApp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-07-09T14:58:59.813+05:30  INFO 29020 --- [QuantityMeasurementApp] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:quantitydb user=SA
+2026-07-09T14:58:59.815+05:30  INFO 29020 --- [QuantityMeasurementApp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-07-09T14:58:59.842+05:30  WARN 29020 --- [QuantityMeasurementApp] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-07-09T14:58:59.872+05:30  INFO 29020 --- [QuantityMeasurementApp] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-07-09T14:59:00.913+05:30  INFO 29020 --- [QuantityMeasurementApp] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-09T14:59:00.990+05:30  INFO 29020 --- [QuantityMeasurementApp] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-09T14:59:01.564+05:30  INFO 29020 --- [QuantityMeasurementApp] [restartedMain] o.e.s.QuantityMeasurementServiceImpl     : QuantityMeasurementService initialized.
+2026-07-09T14:59:01.851+05:30  WARN 29020 --- [QuantityMeasurementApp] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-09T14:59:01.925+05:30  WARN 29020 --- [QuantityMeasurementApp] [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: beee0729-6c1e-461c-8366-1bfd5fa928a2
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-07-09T14:59:01.943+05:30  INFO 29020 --- [QuantityMeasurementApp] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-07-09T14:59:03.245+05:30  INFO 29020 --- [QuantityMeasurementApp] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:quantitydb'
+2026-07-09T14:59:03.303+05:30  INFO 29020 --- [QuantityMeasurementApp] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-07-09T14:59:03.395+05:30  WARN 29020 --- [QuantityMeasurementApp] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2026-07-09T14:59:03.502+05:30  WARN 29020 --- [QuantityMeasurementApp] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2026-07-09T14:59:03.506+05:30  INFO 29020 --- [QuantityMeasurementApp] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-09T14:59:03.520+05:30  WARN 29020 --- [QuantityMeasurementApp] [restartedMain] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-232]
+2026-07-09T14:59:03.521+05:30  INFO 29020 --- [QuantityMeasurementApp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-07-09T14:59:03.525+05:30  INFO 29020 --- [QuantityMeasurementApp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-07-09T14:59:03.557+05:30  INFO 29020 --- [QuantityMeasurementApp] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-07-09T14:59:03.603+05:30 ERROR 29020 --- [QuantityMeasurementApp] [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2026-07-09T15:07:29.181+05:30  INFO 28388 --- [QuantityMeasurementApp] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-07-09T15:07:29.185+05:30  INFO 28388 --- [QuantityMeasurementApp] [Thread-7] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-07-09T15:07:29.196+05:30  INFO 28388 --- [QuantityMeasurementApp] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-07-09T15:07:29.201+05:30  INFO 28388 --- [QuantityMeasurementApp] [Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-09T15:07:29.205+05:30  WARN 28388 --- [QuantityMeasurementApp] [Thread-7] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-232]
+2026-07-09T15:07:29.206+05:30  INFO 28388 --- [QuantityMeasurementApp] [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2026-07-09T15:07:29.208+05:30  INFO 28388 --- [QuantityMeasurementApp] [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
