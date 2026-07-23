@@ -25,4 +25,4 @@ CREATE TABLE IF NOT EXISTS quantity_measurement_history (
     error_message VARCHAR(255),
 
     is_error BOOLEAN DEFAULT FALSE
-);
+    );
