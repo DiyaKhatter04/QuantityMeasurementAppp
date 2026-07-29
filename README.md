@@ -1,68 +1,105 @@
 # Quantity Measurement App — Microservices
 
-Original monolith split into 2 backend services + 1 frontend. **Business logic ekdum unchanged hai** — sirf files re-organize aur `SecurityConfig` ko do hisso me split kiya gaya hai (kyunki ab do alag Spring Boot apps hain).
+The original monolithic application has been split into two backend services and one frontend application. The business logic remains completely unchanged—only the files have been reorganized, and `SecurityConfig` has been divided into two parts because there are now two separate Spring Boot applications.
 
-```
+```text
 QuantityMeasurement-Microservices/
-├── auth-service/        → port 8080  (Google OAuth2 login + JWT issue karta hai)
-├── quantity-service/    → port 8081  (Quantity CRUD/history APIs, JWT verify karta hai)
-└── frontend/             → port 5173  (React + Vite, UI unchanged)
+├── auth-service/        → Port 8080 (Handles Google OAuth2 login and issues JWT tokens)
+├── quantity-service/    → Port 8081 (Handles Quantity CRUD/History APIs and validates JWT tokens)
+└── frontend/            → Port 5173 (React + Vite, UI remains unchanged)
 ```
 
-## Kaam kaise karta hai
+## How It Works
 
-1. Frontend `GET /api/auth/login` → **auth-service (8080)** ko redirect karta hai.
-2. Google login ke baad, auth-service JWT banata hai (`jwt.secret` use karke) aur browser ko
-   `http://localhost:5173/oauth-success?token=...` par bhej deta hai — yeh **unchanged** hai.
-3. Frontend token ko `localStorage` me save karta hai aur har request me `Authorization: Bearer <token>` header bhejta hai.
-4. Quantity APIs (`/api/quantity/**`) ab **quantity-service (8081)** par hain. Yeh service wahi JWT
-   ko apne `JwtAuthenticationFilter` se validate karta hai.
+1. The frontend redirects `GET /api/auth/login` requests to `auth-service` (port 8080).
 
-⚠️ **Important:** Dono services ka `jwt.secret` (application.properties me) **same** hona chahiye,
-warna auth-service ka issue kiya token quantity-service par reject ho jayega. Maine values same rakhi hain.
+2. After a successful Google login, `auth-service` generates a JWT using `jwt.secret` and redirects the browser to:
 
-## Run karne ka tareeka (3 terminals)
+   `http://localhost:5173/oauth-success?token=...`
 
-### 1. Auth Service (port 8080)
+   This behavior remains unchanged from the original implementation.
+
+3. The frontend stores the token in `localStorage` and sends it with every request using the following header:
+
+   `Authorization: Bearer <token>`
+
+4. The Quantity APIs (`/api/quantity/**`) are now hosted on `quantity-service` (port 8081). This service validates the same JWT using its `JwtAuthenticationFilter`.
+
+> **Important:** Both services must use the same `jwt.secret` value in their respective `application.properties` files. Otherwise, tokens issued by `auth-service` will be rejected by `quantity-service`. The same value has been configured in both services.
+
+## How to Run the Application (3 Terminals)
+
+### 1. Auth Service (Port 8080)
+
 ```bash
 cd auth-service
-# .env ya application-local.properties me apna GOOGLE_CLIENT_ID / GOOGLE_CLIENT_SECRET set karo
+
+# Set your GOOGLE_CLIENT_ID and GOOGLE_CLIENT_SECRET
+# in .env or application-local.properties
+
 mvn spring-boot:run
 ```
 
-### 2. Quantity Service (port 8081)
+### 2. Quantity Service (Port 8081)
+
 ```bash
 cd quantity-service
+
 mvn spring-boot:run
 ```
 
-### 3. Frontend (port 5173)
+### 3. Frontend (Port 5173)
+
 ```bash
 cd frontend
+
 npm install
 npm run dev
 ```
 
-Frontend `vite.config.js` me dev-proxy split kiya gaya hai:
-- `/api/auth`, `/oauth2`, `/login` → `localhost:8080` (auth-service)
-- `/api/quantity` → `localhost:8081` (quantity-service)
+The `vite.config.js` file has been updated to split the development proxy configuration as follows:
 
-Yeh sirf routing config hai — koi frontend logic/UI change nahi hui.
+* `/api/auth`, `/oauth2`, `/login` → `localhost:8080` (`auth-service`)
+* `/api/quantity` → `localhost:8081` (`quantity-service`)
 
-## Security note
-`auth-service/src/main/resources/application-local.properties` me original repo ki tarah hi
-Google OAuth client-id/secret hardcoded hain (jaisa original upload me tha). Production me inhe
-env vars (`GOOGLE_CLIENT_ID`, `GOOGLE_CLIENT_SECRET`) se lena recommended hai, aur agar yeh secret
-kahin public repo me gaya hai to Google Console se rotate kar lena best hoga.
+This is purely a routing configuration change—no frontend logic or UI has been modified.
 
-## Ek existing quirk (jo maine chhua nahi, kyunki logic change nahi karna tha)
-`QuantityMeasurementController.java` par `@CrossOrigin(origins = "http://localhost:8080")` already
-laga hua tha original code me bhi — yeh dev me matter nahi karta kyunki Vite proxy se request
-same-origin dikhti hai, lekin agar future me frontend ko kisi doosre origin se seedha quantity-service
-(8081) par hit karwana ho (proxy ke bina), to yeh line update karni padegi. Chhua nahi hai kyunki
-aapne bola tha backend logic same rakhna hai.
+## Security Note
 
-## Kya migrate NAHI kiya gaya
-- `src/test/**` (unit/integration tests) — inhe split karne ke liye rework chahiye hota (mocking,
+`auth-service/src/main/resources/application-local.properties` contains hardcoded Google OAuth Client ID and Client Secret, similar to the original repository upload.
+
+For production environments, it is recommended to load these values from environment variables:
+
+* `GOOGLE_CLIENT_ID`
+* `GOOGLE_CLIENT_SECRET`
+
+Additionally, if these credentials have ever been pushed to a public repository, it is strongly recommended to rotate them using Google Cloud Console.
+
+## Existing Behavior (Intentionally Left Unchanged)
+
+`QuantityMeasurementController.java` already contains the following annotation in the original codebase:
+
+```java
+@CrossOrigin(origins = "http://localhost:8080")
+```
+
+This does not affect development because Vite's proxy makes the requests appear as same-origin.
+
+However, if the frontend is ever configured to communicate directly with `quantity-service` (port 8081) without using the Vite proxy, this annotation will need to be updated accordingly.
+
+No changes were made here to preserve the original backend behavior, as requested.
+
+## What Was NOT Migrated
+
+The following items were intentionally not migrated:
+
+* `src/test/**` (unit and integration tests) — Splitting these would require additional rework, including separate mocking strategies and test database configurations for each microservice. These can be migrated separately if needed.
+* `target/`
+* `logs/`
+* `node_modules/`
+* `dist/`
+
+These are build artifacts and can be regenerated as needed.
+ rework chahiye hota (mocking,
   test DB context alag-alag services ke liye). Agar chahiye to bata dena, alag se bana dunga.
 - `target/`, `logs/`, `node_modules/`, `dist/` — build artifacts, dobara generate ho jayenge.
